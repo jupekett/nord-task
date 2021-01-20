@@ -41,6 +41,7 @@ var calculatePower = function (point, station) {
  * Note: if this code was inline in printBestStations, we'd save
  * one power calculation per point, because we'd have access to
  * the best power already calculated.
+ * @returns {Station | undefined} Best station if found, or undefined if not.
  */
 var findBestStation = function (point, stations) {
     var bestStation = undefined;
