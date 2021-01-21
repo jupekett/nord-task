@@ -112,3 +112,14 @@ const stations: Station[] = [
  * Main entry point for the program
  */
 printBestStations(points, stations);
+
+// Exports for testing
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    distance: distance,
+    distanceToStation: distanceToStation,
+    getCoordinates: getCoordinates,
+    calculatePower: calculatePower,
+    findBestStation: findBestStation,
+  };
+}
