@@ -95,23 +95,25 @@ const printBestStations = (points: Point[], stations: Station[]): void => {
   }
 };
 
-const points: Point[] = [
-  [0, 0],
-  [100, 100],
-  [15, 10],
-  [18, 18],
-];
-
-const stations: Station[] = [
-  [0, 0, 10],
-  [20, 20, 5],
-  [10, 0, 12],
-];
-
 /**
  * Main entry point for the program
  */
-printBestStations(points, stations);
+const mainProgram = (): void => {
+  const points: Point[] = [
+    [0, 0],
+    [100, 100],
+    [15, 10],
+    [18, 18],
+  ];
+  const stations: Station[] = [
+    [0, 0, 10],
+    [20, 20, 5],
+    [10, 0, 12],
+  ];
+  printBestStations(points, stations);
+};
+
+mainProgram();
 
 // Exports for testing
 if (typeof module !== "undefined" && module.exports) {

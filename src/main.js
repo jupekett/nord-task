@@ -79,21 +79,24 @@ var printBestStations = function (points, stations) {
         }
     }
 };
-var points = [
-    [0, 0],
-    [100, 100],
-    [15, 10],
-    [18, 18],
-];
-var stations = [
-    [0, 0, 10],
-    [20, 20, 5],
-    [10, 0, 12],
-];
 /**
  * Main entry point for the program
  */
-printBestStations(points, stations);
+var mainProgram = function () {
+    var points = [
+        [0, 0],
+        [100, 100],
+        [15, 10],
+        [18, 18],
+    ];
+    var stations = [
+        [0, 0, 10],
+        [20, 20, 5],
+        [10, 0, 12],
+    ];
+    printBestStations(points, stations);
+};
+mainProgram();
 // Exports for testing
 if (typeof module !== "undefined" && module.exports) {
     module.exports = {
