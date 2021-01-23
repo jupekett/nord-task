@@ -63,7 +63,7 @@ const calculatePower = (point: Point, station: Station): number => {
  * @returns {Station | undefined} Best station if found, or undefined if not.
  */
 const findBestStation = (point: Point, stations: Station[]): Station => {
-  let bestStation;
+  let bestStation: Station;
   let bestPower = 0;
   for (const station of stations) {
     const power = calculatePower(point, station);
@@ -86,7 +86,7 @@ const printBestStations = (points: Point[], stations: Station[]): void => {
       const stationCoords = getCoordinates(bestStation);
       const power = calculatePower(point, bestStation);
       console.log(
-        `Best link station for point ${point} is ${stationCoords} ` +
+        `Best link station for point ${point} is ${stationCoords}` +
           ` with power ${power.toFixed(2)}`,
       );
     } else {
@@ -96,7 +96,7 @@ const printBestStations = (points: Point[], stations: Station[]): void => {
 };
 
 /**
- * Main entry point for the program
+ * Main program with data
  */
 const mainProgram = (): void => {
   const points: Point[] = [
@@ -113,9 +113,14 @@ const mainProgram = (): void => {
   printBestStations(points, stations);
 };
 
+/**
+ * Main entry point
+ */
 mainProgram();
 
-// Exports for testing
+/**
+ * Exports for testing
+ */
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
     distance: distance,
