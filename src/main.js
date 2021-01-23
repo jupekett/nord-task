@@ -71,7 +71,7 @@ var printBestStations = function (points, stations) {
         if (bestStation) {
             var stationCoords = getCoordinates(bestStation);
             var power = calculatePower(point, bestStation);
-            console.log("Best link station for point " + point + " is " + stationCoords + " " +
+            console.log("Best link station for point " + point + " is " + stationCoords +
                 (" with power " + power.toFixed(2)));
         }
         else {
@@ -80,7 +80,7 @@ var printBestStations = function (points, stations) {
     }
 };
 /**
- * Main entry point for the program
+ * Main program with data
  */
 var mainProgram = function () {
     var points = [
@@ -96,8 +96,13 @@ var mainProgram = function () {
     ];
     printBestStations(points, stations);
 };
+/**
+ * Main entry point
+ */
 mainProgram();
-// Exports for testing
+/**
+ * Exports for testing
+ */
 if (typeof module !== "undefined" && module.exports) {
     module.exports = {
         distance: distance,
