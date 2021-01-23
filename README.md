@@ -34,6 +34,8 @@ One-shot:
 
 ### Linting with ESLint
 
+Note: `--fix` handle is baked into the command to automatically fix some errors.
+
     npm run lint
 
 ### Running the tests
