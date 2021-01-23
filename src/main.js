@@ -109,6 +109,6 @@ if (typeof module !== "undefined" && module.exports) {
         distanceToStation: distanceToStation,
         getCoordinates: getCoordinates,
         calculatePower: calculatePower,
-        findBestStation: findBestStation
+        findBestStation: findBestStation,
     };
 }
