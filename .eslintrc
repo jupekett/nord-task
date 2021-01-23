@@ -30,12 +30,17 @@
         "standard",
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jest/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": ["prettier", "@typescript-eslint"]
+    "plugins": [
+        "prettier", 
+        "@typescript-eslint", 
+        "jest"
+    ]
 }

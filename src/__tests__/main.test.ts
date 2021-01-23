@@ -34,12 +34,13 @@ describe("distance", () => {
 
 describe("getCoordinates", () => {
   it("correctly extracts x- and y-coordinates as a Point tuple from a Station tuple", () => {
+    // eslint-disable-next-line no-undef
     const stations: Station[] = [
-      [0, 0, 0],              // base case
-      [1000, -1000, 500],     // also negative values
+      [0, 0, 0], // base case
+      [1000, -1000, 500], // also negative values
       [-12.34, 56.78, 91.23], // floats
     ];
-    for (let station of stations) {
+    for (const station of stations) {
       expect(main.getCoordinates(station)).toEqual([station[0], station[1]]);
     }
   });
@@ -50,16 +51,19 @@ describe("distanceToStation", () => {
     "has return values identical to return values of function 'distance' for " +
       "tuples with identical x- and y-coordinates",
     () => {
+      // eslint-disable-next-line no-undef
       const points: Point[] = [
         [0, 0],
         [-999, 999],
         [55.55, 44.44],
       ];
+      // eslint-disable-next-line no-undef
       const stations: Station[] = [
-        [0, 0, 0],              // base case
-        [1000, -1000, 500],     // also negative values
+        [0, 0, 0], // base case
+        [1000, -1000, 500], // also negative values
         [-12.34, 56.78, 91.23], // floats
       ];
+      // eslint-disable-next-line no-undef
       const stationCoords: Point[] = [
         main.getCoordinates(stations[0]),
         main.getCoordinates(stations[1]),
@@ -80,14 +84,16 @@ describe("calculatePower", () => {
   });
 
   it("calculates power correctly when distance <= reach", () => {
+    // eslint-disable-next-line no-undef
     const points: Point[] = [
       [0, 0],
       [100, 100],
       [-50.0, 50.0],
     ];
+    // eslint-disable-next-line no-undef
     const stations: Station[] = [
-      [0, 10, 20],      // distance < reach
-      [0, 100, 100],    // distance == reach
+      [0, 10, 20], // distance < reach
+      [0, 100, 100], // distance == reach
       [-49.9, 50.0, 1], // 'reach - distance' between 0 and 1
     ];
     const powers: number[] = [100, 0, 0.81];
@@ -111,16 +117,19 @@ describe("findBestStation", () => {
   });
 
   it("returns the only station within reach", () => {
+    // eslint-disable-next-line no-undef
     const station: Station = [10, 10, 20];
     expect(main.findBestStation([0, 0], [station])).toBe(station);
   });
 
   it("returns the link station with highest power from multiple stations within reach", () => {
+    // eslint-disable-next-line no-undef
     const point: Point = [0, 0];
+    // eslint-disable-next-line no-undef
     const stations: Station[] = [
-      [0, 10, 12],  // power == 4
-      [0, 0, 10],   // power == 100
-      [0, 10, 15],  // power == 25
+      [0, 10, 12], // power == 4
+      [0, 0, 10], // power == 100
+      [0, 10, 15], // power == 25
     ];
     expect(main.findBestStation(point, stations)).toEqual([0, 0, 10]);
   });
