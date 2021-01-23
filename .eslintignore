@@ -1,0 +1,3 @@
+# Ignore javascript files, as they are compiled to ES6
+# from typescript
+**/*.js
