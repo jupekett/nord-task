@@ -23,7 +23,12 @@ or
 
     npm i
 
+### Running locally
+
+    npx serve
+
 ### Compiling TS to JS
+
 One-shot: 
 
     npx tsc
