@@ -15,6 +15,10 @@ I recommend using ESLint- and Prettier-extensions in Visual Studio Code, if you 
 
 Prerequisite: `npm` is installed.
 
+### Running locally
+
+    npx serve
+
 ### Installing dependencies
 
     npm install
@@ -22,10 +26,6 @@ Prerequisite: `npm` is installed.
 or
 
     npm i
-
-### Running locally
-
-    npx serve
 
 ### Compiling TS to JS
 
