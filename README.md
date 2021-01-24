@@ -13,7 +13,7 @@ I recommend using ESLint- and Prettier-extensions in Visual Studio Code, if you 
 
 ## Getting started
 
-Prerequisite: `npm` is installed. [Get NPM](https://www.npmjs.com/get-npm).
+Prerequisite: `npm` is installed. [Get npm](https://www.npmjs.com/get-npm).
 
 ### Running locally
 
